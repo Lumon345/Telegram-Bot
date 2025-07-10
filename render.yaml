@@ -1,11 +1,7 @@
 services:
   - type: web
-    name: andrzej-bot
-    runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "bash start.sh"
+    name: Andrzej Bot
     env: python
-    region: frankfurt
     plan: free
-    branch: main
-    repo: https://github.com/Lumon345/Telegram-Bot
+    buildCommand: python -m pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python bot.py
